@@ -21,6 +21,7 @@ def total_sales(sales: list[int]) -> int:
 	print(testGlobal) # 10
 	return sum(sales)
 
+
 total_sales([10])
 print(testGlobal) # 10
 
