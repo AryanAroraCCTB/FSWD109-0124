@@ -73,7 +73,10 @@
 # • GET /reviews/{id}/comments
 # • GET /posts/{id}/comments
 
-# • GET /comments
-# • GET /comments?reviewId={id}
+# • GET /comments -> def getAllComments()
+# • POST /comments -> def createComment(body)
+# • GET /comments?reviewId={id} -> def getAllComments(id)
 
 
+# • GET /home -> def getHomePage(): FIRST_NAME = Aryan -> <h1>Hello {FIRST_NAME}</h1>
+# • GET /home -> def getHomePage(): FIRST_NAME = ABC -> <h1>Hello {FIRST_NAME}</h1>
