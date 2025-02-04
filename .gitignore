@@ -1,2 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+# venv/
+# flask_fundamentals/venv/
+*lib/
+*include/
+
+# Environment variables and secrets
+.env
+*.env
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Logs and database files
+*.log
+*.db
+
+# Shell scripts
 autoPull.sh
 autoPush.sh
+
+# macOS-specific files
+.DS_Store
+
+# VS Code settings
+.vscode/
