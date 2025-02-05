@@ -1,7 +1,7 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 # Flask App
-app = Flask(__name__)
+app = Flask(__name__, template_folder = "templates")
 
 # Define our routes
 @app.route('/', methods=["GET", "POST"])
@@ -38,19 +38,32 @@ def contact():
 	# "name=abc" -> name = "abc"
 	return 'Contact Page'
 
-
+# /post/2
 @app.route('/post/<id>')
 def postById(id):
 	return id
 
+# /post?author=abc&year=2025
 @app.route('/post')
 def post():
 	print(request.method, request.path, request.query_string, request.args)
-	author = request.args.get('author')
-	year = request.args.get('year')
-	print(author, year)
+	author: str = request.args.get('author')
+	year: int = request.args.get('year')
+	author2: str = request.args.get('author2')
+	
+	print(author, year, author2)
 
 	return 'List of all posts'
 
+
+@app.route('/demo')
+def demo():
+	return render_template('index.html')
+
+@app.route('/style.css')
+def demo2():
+	return render_template('style.css')
+
 if __name__ == '__main__':
 	app.run(debug=True)
+
