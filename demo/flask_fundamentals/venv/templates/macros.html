@@ -1,0 +1,11 @@
+{% macro renderItems(items) %} {% for item in items %}
+<div>
+    <h3>Product Type 1: {{item.name}}</h3>
+    <p>For ${{item.price}} only</p>
+</div>
+{% endfor %} {% endmacro %} {% macro renderItems2(items) %} {% for item in items %}
+<div>
+    <h3>Product Type 2: {{item.name}}</h3>
+    <p>For ${{item.price + 10}} only</p>
+</div>
+{% endfor %} {% endmacro %}

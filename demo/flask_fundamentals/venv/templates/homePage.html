@@ -1,0 +1,55 @@
+{% import 'macros.html' as macros %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HOME PAGE</title>
+    </head>
+    <body>
+        <div class="">
+            {% include 'welcomeMessage.html' %}
+
+            <hr />
+
+            <p>Hello {{ user.username }}</p>
+
+            <p>Number is {{ number }}</p>
+
+            {% if user.isLoggedIn or True %}
+            <p>You are logged in</p>
+            {% endif %}
+
+            <hr />
+
+            {% if not user.isLoggedIn %}
+            <p>You are NOT logged in</p>
+            {% endif %}
+
+            <hr />
+
+            <hr />
+
+            {{ macros.renderItems(items) }} {{ macros.renderItems2(items) }}
+
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore facilis obcaecati corporis iste aut repellat minus, voluptatibus,
+                quo similique maxime esse laudantium a quidem perspiciatis quas natus et quasi corrupti.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore facilis obcaecati corporis iste aut repellat minus, voluptatibus,
+                quo similique maxime esse laudantium a quidem perspiciatis quas natus et quasi corrupti.
+            </p>
+
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore facilis obcaecati corporis iste aut repellat minus, voluptatibus,
+                quo similique maxime esse laudantium a quidem perspiciatis quas natus et quasi corrupti.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore facilis obcaecati corporis iste aut repellat minus, voluptatibus,
+                quo similique maxime esse laudantium a quidem perspiciatis quas natus et quasi corrupti.
+            </p>
+        </div>
+    </body>
+</html>
