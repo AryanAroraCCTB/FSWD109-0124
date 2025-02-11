@@ -8,6 +8,7 @@ __pycache__/
 # flask_fundamentals/venv/
 *lib/
 *include/
+*bin/
 
 # Environment variables and secrets
 .env
